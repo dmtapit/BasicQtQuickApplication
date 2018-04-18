@@ -53,6 +53,34 @@ ApplicationWindow {
                     }
                 }
             ]
+
+            transitions: [
+                Transition {
+                    from: "*"; to: "State1"
+                    NumberAnimation {
+                        easing.type: Easing.OutBounce
+                        properties: "x,y";
+                        duration: 1000
+                    }
+                },
+
+                Transition {
+                    from: "*"; to: "State2"
+                    NumberAnimation {
+                        properties: "x,y";
+                        easing.type: Easing.InOutQuad;
+                        duration: 2000
+                    }
+                },
+
+                Transition {
+                    NumberAnimation {
+                        properties: "x,y";
+                        duration: 200
+                    }
+                }
+
+            ]
         }
     }
 
